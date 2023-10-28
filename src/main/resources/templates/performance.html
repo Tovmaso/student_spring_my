@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Список студентов</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="container mt-5 text-center">
+        <div>
+            <a class="text-align-left d-flex text-decoration-none text-reset" href="/main">На главную</a>
+            <a class="text-align-left d-flex text-decoration-none text-reset" href="/students">Назад</a>
+        </div>
+        <h1>Система управления студентами и их успеваемостью</h1>
+    </div>
+    <div class="table-wrapper d-flex justify-content-left mt-4 ">
+        <div class="container-table col-10">
+            <div>
+                <h6>Студент</h6>
+            </div>
+            <table class="table table-bordered border-black table-striped table-hover">
+                <thead>
+                <tr class="table-bordered border-black table-primary">
+                    <th scope="col"></th>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Фамилия</th>
+                    <th scope="col">Группа</th>
+                    <th scope="col">Дата поступления</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <tr th:each="el : ${optionalStudent}">
+                    <td class="text-center">
+                        <input type="checkbox" th:value="${el.id}">
+                    </td>
+                    <td th:text="${el.name}"/>
+                    <td th:text="${el.lastname}"/>
+                    <td th:text="${el.stream_group}"/>
+                    <td th:text="${el.date}"/>
+                </tr>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <div class="container mt-4 col-4 row justify-content-start">
+            <table class="table table-striped border-black table-hover table-bordered ">
+                <thead class="table-primary border-black">
+                <h5 class="mt-2 mb-4 p-2  border text-center text-bg-light"><strong>Список дисциплин</strong></h5>
+                <tr class="panel-heading">
+                    <th class="text-center">№</th>
+                    <th>Наименование дисциплин</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="el : ${discipline}">
+                    <td class="text-center">
+                        <input type="checkbox">
+                    </td>
+                    <td th:text="${el.discipline}"/>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+</div>
+</body>
+</html>
