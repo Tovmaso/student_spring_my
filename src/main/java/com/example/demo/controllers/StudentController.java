@@ -89,7 +89,7 @@ public class StudentController {
     public String studentPerformance(@PathVariable(value = "id") long id, Model model){
         Optional<Student> optionalStudent = studentRepo.findById(id);
         model.addAttribute("optionalStudent",optionalStudent.get());
-        Iterable <Discipline> discipline = disciplineRepo.findAll();
+        Iterable<Discipline> discipline = disciplineRepo.findAll();
         model.addAttribute("discipline", discipline);
         return "performance";
     }
