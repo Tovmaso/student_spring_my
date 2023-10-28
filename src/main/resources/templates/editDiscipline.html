@@ -12,12 +12,12 @@
     <a class="text-align-left d-flex text-decoration-none text-reset" href="/showDiscipline">Назад</a>
 </div>
 <div class="container mt-5">
-    <div class="col-md-4 mx-auto">
+    <div class="col-4 mx-auto">
         <h2 class="text-center my-3">Редактировать дисциплину</h2>
         <form action="/editDiscipline" method="post">
             <input type="hidden" name="id" th:value="${discipline.id}">
             <div class="row">
-                <div class="mb-3 col-sm-12">
+                <div class="mb-3">
                     <input th:value="${discipline.discipline}" name="discipline" type="text" class="form-control" placeholder="Дисциплина">
                 </div>
                 <div class="mb-3">
