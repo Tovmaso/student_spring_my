@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="container mt-5 text-center">
+    <div class="container mt-2 text-center">
         <div>
             <a class="text-align-left d-flex text-decoration-none text-reset" href="/main">На главную</a>
             <a class="text-align-left d-flex text-decoration-none text-reset" href="/students">Назад</a>
@@ -51,10 +51,9 @@
             <div class="dropdown row justify-content-center d-flex position-absolute m-2 pt-4 w-90">
                 <div class="col-4">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" >
-                        Семестр
+                        Семестр 1
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><a class="dropdown-item" href="#">Семестр 1</a></li>
                         <li><a class="dropdown-item" href="#">Семестр 2</a></li>
                         <li><a class="dropdown-item" href="#">Семестр 3</a></li>
                         <li><a class="dropdown-item" href="#">Семестр 4</a></li>
@@ -69,6 +68,7 @@
                     <tr class="panel-heading">
                         <th class="text-center">№</th>
                         <th>Наименование дисциплин</th>
+                        <th>Оценка</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -77,6 +77,7 @@
                             <input type="checkbox">
                         </td>
                         <td th:text="${el.discipline}"/>
+                        <td></td>
                     </tr>
                     </tbody>
                 </table>

@@ -21,11 +21,6 @@ public class StudentController {
     @Autowired
     private DisciplineRepo disciplineRepo;
 
-    @GetMapping("/logout")
-    public String logOut(){
-        return "logout";
-    }
-
     @GetMapping("/addStudent")
     public String showStudent(){
         return "addStudent";
@@ -44,7 +39,7 @@ public class StudentController {
     }
 
     @GetMapping("/main")
-    public String mainStudent(){
+    public String mainStudent(Model model){
         return "/main";
     }
 
