@@ -40,7 +40,7 @@ public class StudentController {
 
     @GetMapping("/main")
     public String mainStudent(Model model){
-        return "/main";
+        return "main";
     }
 
     @GetMapping("/students")

@@ -19,20 +19,20 @@
           <div th:if="${param.logout}">
             Неверный логин или пароль
           </div>
-            <div class="row">
-              <div class="mb-3 col-sm-50">
-                <div class="mb-2">
-                  <input  type="text" name="username" class="form-control" placeholder="Почта">
-                </div>
-                <div>
-                  <input  type="password" name="password" class="form-control" placeholder="Пароль">
-                </div>
+          <div class="row">
+            <div class="mb-3 col-sm-50">
+              <div class="mb-2">
+                <input  type="text" name="username" class="form-control" placeholder="Почта">
               </div>
-              <div class="mb-3">
-                <input type="submit" class="form-control btn btn-primary" value="Войти">
-                <a href="/registration">Зарегистрироваться</a>
+              <div>
+                <input  type="password" name="password" class="form-control" placeholder="Пароль">
               </div>
             </div>
+            <div class="mb-3">
+              <input type="submit" class="form-control btn btn-primary" value="Войти">
+              <a href="/registration">Зарегистрироваться</a>
+            </div>
+          </div>
         </div>
       </div>
     </form>

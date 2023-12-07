@@ -27,11 +27,11 @@ public class SecurityConfiguration {
     }
     @Bean
     public SecurityFilterChain securityFilterChain (HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((request)->request
+   /*     http
+                        .authorizeHttpRequests((request)->request
                         .requestMatchers("/registration").permitAll()
-                        .anyRequest().authenticated())
-                        .formLogin((form)->form.loginPage("/login").permitAll())
-                        .logout((logout)->logout.permitAll());
+                        .anyRequest().authenticated());
+                        *//*.formLogin((form)->form.loginPage("/login").permitAll());*/
         return http.build();
     }
 }
